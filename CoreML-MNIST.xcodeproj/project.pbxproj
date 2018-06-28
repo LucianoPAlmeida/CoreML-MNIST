@@ -13,6 +13,11 @@
 		B2AE810120E46A40007295CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AE810020E46A40007295CB /* Assets.xcassets */; };
 		B2AE810420E46A40007295CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AE810220E46A40007295CB /* LaunchScreen.storyboard */; };
 		B2AE810F20E46A40007295CB /* CoreML_MNISTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE810E20E46A40007295CB /* CoreML_MNISTTests.swift */; };
+		B2AE811E20E46E39007295CB /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */; };
+		B2AE812020E472F7007295CB /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE811F20E472F7007295CB /* DrawerView.swift */; };
+		B2AE812220E47845007295CB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE812120E47845007295CB /* UIView+Extensions.swift */; };
+		B2AE812A20E4B144007295CB /* Mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B2AE812920E4B144007295CB /* Mnist.mlmodel */; };
+		B2AE812D20E4BB89007295CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AE812C20E4BB89007295CB /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		B2AE810A20E46A40007295CB /* CoreML-MNISTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreML-MNISTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AE810E20E46A40007295CB /* CoreML_MNISTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_MNISTTests.swift; sourceTree = "<group>"; };
 		B2AE811020E46A40007295CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		B2AE811F20E472F7007295CB /* DrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		B2AE812120E47845007295CB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B2AE812920E4B144007295CB /* Mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Mnist.mlmodel; sourceTree = "<group>"; };
+		B2AE812C20E4BB89007295CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AE812D20E4BB89007295CB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +73,7 @@
 				B2AE80F820E46A3F007295CB /* CoreML-MNIST */,
 				B2AE810D20E46A40007295CB /* CoreML-MNISTTests */,
 				B2AE80F720E46A3F007295CB /* Products */,
+				B2AE812B20E4BB89007295CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +89,16 @@
 		B2AE80F820E46A3F007295CB /* CoreML-MNIST */ = {
 			isa = PBXGroup;
 			children = (
+				B2AE812920E4B144007295CB /* Mnist.mlmodel */,
 				B2AE80F920E46A3F007295CB /* AppDelegate.swift */,
 				B2AE80FB20E46A3F007295CB /* ViewController.swift */,
 				B2AE80FD20E46A3F007295CB /* Main.storyboard */,
 				B2AE810020E46A40007295CB /* Assets.xcassets */,
 				B2AE810220E46A40007295CB /* LaunchScreen.storyboard */,
 				B2AE810520E46A40007295CB /* Info.plist */,
+				B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */,
+				B2AE811F20E472F7007295CB /* DrawerView.swift */,
+				B2AE812120E47845007295CB /* UIView+Extensions.swift */,
 			);
 			path = "CoreML-MNIST";
 			sourceTree = "<group>";
@@ -94,6 +110,14 @@
 				B2AE811020E46A40007295CB /* Info.plist */,
 			);
 			path = "CoreML-MNISTTests";
+			sourceTree = "<group>";
+		};
+		B2AE812B20E4BB89007295CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE812C20E4BB89007295CB /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AE812A20E4B144007295CB /* Mnist.mlmodel in Sources */,
+				B2AE812220E47845007295CB /* UIView+Extensions.swift in Sources */,
 				B2AE80FC20E46A3F007295CB /* ViewController.swift in Sources */,
 				B2AE80FA20E46A3F007295CB /* AppDelegate.swift in Sources */,
+				B2AE812020E472F7007295CB /* DrawerView.swift in Sources */,
+				B2AE811E20E46E39007295CB /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
