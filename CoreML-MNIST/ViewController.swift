@@ -11,7 +11,7 @@ import CoreML
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imgREsized: UIImageView!
+    @IBOutlet weak var imgResized: UIImageView!
     @IBOutlet weak var drawerView: DrawerView!
     @IBOutlet weak var lblPrediction: UILabel!
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     func preprocess(image: UIImage) -> CVPixelBuffer? {
         let size = CGSize(width: 28, height: 28)
         let resized = image.resized(to: size)
-        imgREsized.image = resized
+        imgResized.image = resized
         return resized?.pixelBuffer()
     }
     
@@ -53,6 +53,7 @@ extension ViewController: DrawerViewDelegate {
     
     func didStartDraw(view: DrawerView) {
         lblPrediction.text = nil
+        imgResized.image = nil
     }
 }
 

@@ -71,7 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="drawerView" destination="yza-nF-QjF" id="pnm-eF-q6T"/>
-                        <outlet property="imgREsized" destination="Gih-xs-Boo" id="dOd-tO-aTu"/>
+                        <outlet property="imgResized" destination="Gih-xs-Boo" id="1fD-u0-8gl"/>
                         <outlet property="lblPrediction" destination="MNU-Go-fJ5" id="g62-2q-B6P"/>
                     </connections>
                 </viewController>
