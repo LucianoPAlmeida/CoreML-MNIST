@@ -25,17 +25,23 @@ class DrawerView: UIView {
         }
     }
     
+    var lineWidth: CGFloat = 10.0 {
+        didSet {
+            currentPath.lineWidth = lineWidth
+        }
+    }
+    
     weak var delegate: DrawerViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        currentPath.lineWidth = 5.0
+        currentPath.lineWidth = lineWidth
 
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        currentPath.lineWidth = 5.0
+        currentPath.lineWidth = lineWidth
     }
     
     private func startDraw(at point: CGPoint) {
