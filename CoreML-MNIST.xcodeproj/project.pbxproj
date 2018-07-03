@@ -67,6 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2581E8B20EB1E6200EE947F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */,
+				B2AE812120E47845007295CB /* UIView+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B2581E8C20EB1E7800EE947F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE811F20E472F7007295CB /* DrawerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B2AE80ED20E46A3F007295CB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +106,8 @@
 		B2AE80F820E46A3F007295CB /* CoreML-MNIST */ = {
 			isa = PBXGroup;
 			children = (
+				B2581E8C20EB1E7800EE947F /* View */,
+				B2581E8B20EB1E6200EE947F /* Extension */,
 				B2AE812920E4B144007295CB /* Mnist.mlmodel */,
 				B2AE80F920E46A3F007295CB /* AppDelegate.swift */,
 				B2AE80FB20E46A3F007295CB /* ViewController.swift */,
@@ -96,9 +115,6 @@
 				B2AE810020E46A40007295CB /* Assets.xcassets */,
 				B2AE810220E46A40007295CB /* LaunchScreen.storyboard */,
 				B2AE810520E46A40007295CB /* Info.plist */,
-				B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */,
-				B2AE811F20E472F7007295CB /* DrawerView.swift */,
-				B2AE812120E47845007295CB /* UIView+Extensions.swift */,
 			);
 			path = "CoreML-MNIST";
 			sourceTree = "<group>";

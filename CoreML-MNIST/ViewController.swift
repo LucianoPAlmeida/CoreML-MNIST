@@ -24,7 +24,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     fileprivate func predict() {
@@ -37,13 +36,17 @@ class ViewController: UIViewController {
         }
     }
     
-    func preprocess(image: UIImage) -> CVPixelBuffer? {
+    fileprivate func preprocess(image: UIImage) -> CVPixelBuffer? {
         let size = CGSize(width: 28, height: 28)
         let resized = image.resized(to: size)
         imgResized.image = resized
         return resized?.pixelBuffer()
     }
     
+    fileprivate func clearPredictions() {
+        lblPrediction.text = nil
+        imgResized.image = nil
+    }
 }
 
 extension ViewController: DrawerViewDelegate {
@@ -52,8 +55,7 @@ extension ViewController: DrawerViewDelegate {
     }
     
     func didStartDraw(view: DrawerView) {
-        lblPrediction.text = nil
-        imgResized.image = nil
+        clearPredictions()
     }
 }
 

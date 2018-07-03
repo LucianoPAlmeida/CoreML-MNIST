@@ -24,20 +24,27 @@ extension UIImage {
     func pixelBuffer() -> CVPixelBuffer? {
         var pixelBuffer: CVPixelBuffer? = nil
         
-        let width = Int(self.size.width)
-        let height = Int(self.size.height)
+        let width = Int(size.width)
+        let height = Int(size.height)
         
         CVPixelBufferCreate(kCFAllocatorDefault, width, height, kCVPixelFormatType_OneComponent8, nil, &pixelBuffer)
-        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags.readOnly)
+        
+        guard let unwrappedPixelBuffer = pixelBuffer else { return nil }
+        
+        CVPixelBufferLockBaseAddress(unwrappedPixelBuffer, CVPixelBufferLockFlags.readOnly)
         
         let colorspace = CGColorSpaceCreateDeviceGray()
-        let bitmapContext = CGContext(data: CVPixelBufferGetBaseAddress(pixelBuffer!), width: width, height: height, bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: colorspace, bitmapInfo: 0)!
+        guard let bitmapContext = CGContext(data: CVPixelBufferGetBaseAddress(unwrappedPixelBuffer),
+                                            width: width, height: height,
+                                            bitsPerComponent: 8,
+                                            bytesPerRow: CVPixelBufferGetBytesPerRow(unwrappedPixelBuffer),
+                                            space: colorspace, bitmapInfo: 0) else { return nil }
         
-        guard let cg = self.cgImage else {
+        guard let cgImage = self.cgImage else {
             return nil
         }
         
-        bitmapContext.draw(cg, in: CGRect(x: 0, y: 0, width: width, height: height))
+        bitmapContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         
         return pixelBuffer
     }
