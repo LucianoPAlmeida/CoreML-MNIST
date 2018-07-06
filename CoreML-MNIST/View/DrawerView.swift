@@ -25,7 +25,7 @@ class DrawerView: UIView {
         }
     }
     
-    var lineWidth: CGFloat = 10.0 {
+    var lineWidth: CGFloat = 15.0 {
         didSet {
             currentPath.lineWidth = lineWidth
         }

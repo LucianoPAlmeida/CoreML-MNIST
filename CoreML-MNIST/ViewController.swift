@@ -14,16 +14,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgResized: UIImageView!
     @IBOutlet weak var drawerView: DrawerView!
     @IBOutlet weak var lblPrediction: UILabel!
+
+    private var bottomLineLayer: CAGradientLayer = CAGradientLayer()
     
     var mnistModel: Mnist = Mnist()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         drawerView.delegate = self
+        setupBottomLine()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layoutBottomLine()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func setupBottomLine() {
+        bottomLineLayer.colors = [UIColor.black.cgColor, UIColor.white.cgColor, UIColor.black.cgColor]
+        bottomLineLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
+        view.layer.addSublayer(bottomLineLayer)
+    }
+    
+    private func layoutBottomLine() {
+        let originY = drawerView.frame.origin.y + drawerView.frame.size.height - 1.0
+        bottomLineLayer.frame = CGRect(origin: CGPoint(x: 0, y: originY),
+                                       size: CGSize(width: drawerView.frame.size.width, height: 1.0))
     }
     
     fileprivate func predict() {

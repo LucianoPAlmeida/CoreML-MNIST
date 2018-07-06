@@ -67,13 +67,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B2581E8B20EB1E6200EE947F /* Extension */ = {
+		B2581E8B20EB1E6200EE947F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */,
 				B2AE812120E47845007295CB /* UIView+Extensions.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B2581E8C20EB1E7800EE947F /* View */ = {
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B2581E8C20EB1E7800EE947F /* View */,
-				B2581E8B20EB1E6200EE947F /* Extension */,
+				B2581E8B20EB1E6200EE947F /* Extensions */,
 				B2581E8D20EB261400EE947F /* Mnist.mlmodel */,
 				B2AE80F920E46A3F007295CB /* AppDelegate.swift */,
 				B2AE80FB20E46A3F007295CB /* ViewController.swift */,
