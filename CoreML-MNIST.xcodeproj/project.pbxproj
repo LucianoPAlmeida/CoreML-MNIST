@@ -186,9 +186,11 @@
 				TargetAttributes = {
 					B2AE80F520E46A3F007295CB = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 					B2AE810920E46A40007295CB = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 						TestTargetID = B2AE80F520E46A3F007295CB;
 					};
 				};
@@ -412,7 +414,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.aisdigital.CoreML-MNIST";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,7 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.aisdigital.CoreML-MNIST";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -451,7 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.aisdigital.CoreML-MNISTTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreML-MNIST.app/CoreML-MNIST";
 			};
@@ -472,7 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.aisdigital.CoreML-MNISTTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreML-MNIST.app/CoreML-MNIST";
 			};
