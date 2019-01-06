@@ -12,13 +12,10 @@ import CoreML
 extension UIImage {
     
     func resized(to size: CGSize) -> UIImage? {
-        defer {
-            UIGraphicsEndImageContext()
-        }
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: size.width, height: size.height), false, 1.0)
-        self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        return image
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image(actions: { (context) in
+           self.draw(in: CGRect(origin: .zero, size: size))
+        })
     }
     
     func pixelBuffer() -> CVPixelBuffer? {
