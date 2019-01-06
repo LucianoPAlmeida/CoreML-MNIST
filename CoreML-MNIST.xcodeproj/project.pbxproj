@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2581E8E20EB261400EE947F /* Mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B2581E8D20EB261400EE947F /* Mnist.mlmodel */; };
+		B20ABD7E216B0A0E0011EFF4 /* Mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B20ABD7D216B0A0E0011EFF4 /* Mnist.mlmodel */; };
 		B2AE80FA20E46A3F007295CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE80F920E46A3F007295CB /* AppDelegate.swift */; };
 		B2AE80FC20E46A3F007295CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE80FB20E46A3F007295CB /* ViewController.swift */; };
 		B2AE80FF20E46A3F007295CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AE80FD20E46A3F007295CB /* Main.storyboard */; };
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B2581E8D20EB261400EE947F /* Mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Mnist.mlmodel; sourceTree = "<group>"; };
+		B20ABD7D216B0A0E0011EFF4 /* Mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Mnist.mlmodel; sourceTree = "<group>"; };
 		B2AE80F620E46A3F007295CB /* CoreML-MNIST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML-MNIST.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AE80F920E46A3F007295CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AE80FB20E46A3F007295CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +70,7 @@
 		B2581E8B20EB1E6200EE947F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B20ABD7D216B0A0E0011EFF4 /* Mnist.mlmodel */,
 				B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */,
 				B2AE812120E47845007295CB /* UIView+Extensions.swift */,
 			);
@@ -108,7 +109,6 @@
 			children = (
 				B2581E8C20EB1E7800EE947F /* View */,
 				B2581E8B20EB1E6200EE947F /* Extensions */,
-				B2581E8D20EB261400EE947F /* Mnist.mlmodel */,
 				B2AE80F920E46A3F007295CB /* AppDelegate.swift */,
 				B2AE80FB20E46A3F007295CB /* ViewController.swift */,
 				B2AE80FD20E46A3F007295CB /* Main.storyboard */,
@@ -239,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2581E8E20EB261400EE947F /* Mnist.mlmodel in Sources */,
+				B20ABD7E216B0A0E0011EFF4 /* Mnist.mlmodel in Sources */,
 				B2AE812220E47845007295CB /* UIView+Extensions.swift in Sources */,
 				B2AE80FC20E46A3F007295CB /* ViewController.swift in Sources */,
 				B2AE80FA20E46A3F007295CB /* AppDelegate.swift in Sources */,
