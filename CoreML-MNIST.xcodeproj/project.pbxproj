@@ -70,7 +70,6 @@
 		B2581E8B20EB1E6200EE947F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B20ABD7D216B0A0E0011EFF4 /* Mnist.mlmodel */,
 				B2AE811D20E46E39007295CB /* UIImage+Extensions.swift */,
 				B2AE812120E47845007295CB /* UIView+Extensions.swift */,
 			);
@@ -107,6 +106,7 @@
 		B2AE80F820E46A3F007295CB /* CoreML-MNIST */ = {
 			isa = PBXGroup;
 			children = (
+				B20ABD7D216B0A0E0011EFF4 /* Mnist.mlmodel */,
 				B2581E8C20EB1E7800EE947F /* View */,
 				B2581E8B20EB1E6200EE947F /* Extensions */,
 				B2AE80F920E46A3F007295CB /* AppDelegate.swift */,
